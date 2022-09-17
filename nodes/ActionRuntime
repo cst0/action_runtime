@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
 import rospy
-from classic_planning_runtime import action_runtime
+from action_runtime import action_runtime
 
 def main():
     rospy.init_node('action_runtime')
-    ActionRuntime()
+    action_runtime.ActionRuntime()
     rospy.spin()
 
 if __name__ == '__main__':
