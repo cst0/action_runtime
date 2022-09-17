@@ -13,6 +13,12 @@ from action_runtime.srv import (
     CreatePlanResponse,
     CreatePlanRequest,
 )
+from action_runtime.srv import (
+    GetPlan,
+    GetPlanResponse,
+    GetPlanRequest,
+
+)
 from action_runtime.srv import LoadPDDL, LoadPDDLRequest, LoadPDDLResponse
 from action_runtime.srv import (
     Observation,
@@ -45,6 +51,7 @@ class ActionRuntime:
         self.srv_create_plan = rospy.Service(
             "create_plan", CreatePlan, self._handle_create_plan
         )
+        self.srv_get_plan = rospy.Service("get_plan", GetPlan, self._handle_get_plan)
         self.srv_load_pddl = rospy.Service(
             "load_pddl", LoadPDDL, self._handle_load_pddl
         )
@@ -94,6 +101,9 @@ class ActionRuntime:
             resp.msg = "No plan found"
 
         return resp
+
+    def _handle_get_plan(self, _: GetPlanRequest) -> GetPlanResponse:
+        return GetPlanResponse(plan=self.plan)
 
     def _handle_load_pddl(self, req: LoadPDDLRequest) -> LoadPDDLResponse:
         resp = LoadPDDLResponse()
