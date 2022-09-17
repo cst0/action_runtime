@@ -2,35 +2,35 @@
 
 # ros deps
 import rospy
-from classic_planning_runtime.msg import Action, Condition
-from classic_planning_runtime.srv import (
+from action_runtime.msg import Action, Condition
+from action_runtime.srv import (
     ActionTrigger,
     ActionTriggerRequest,
     ActionTriggerResponse,
 )
-from classic_planning_runtime.srv import (
+from action_runtime.srv import (
     CreatePlan,
     CreatePlanResponse,
     CreatePlanRequest,
 )
-from classic_planning_runtime.srv import LoadPDDL, LoadPDDLRequest, LoadPDDLResponse
-from classic_planning_runtime.srv import (
+from action_runtime.srv import LoadPDDL, LoadPDDLRequest, LoadPDDLResponse
+from action_runtime.srv import (
     Observation,
     ObservationRequest,
     ObservationResponse,
 )
-from classic_planning_runtime.srv import (
+from action_runtime.srv import (
     RegisterAction,
     RegisterActionRequest,
     RegisterActionResponse,
 )
-from classic_planning_runtime.srv import (
+from action_runtime.srv import (
     RegisterCondition,
     RegisterConditionRequest,
     RegisterConditionResponse,
 )
-from classic_planning_runtime.srv import RunAction, RunActionRequest, RunActionResponse
-from classic_planning_runtime.srv import RunPlan, RunPlanRequest, RunPlanResponse
+from action_runtime.srv import RunAction, RunActionRequest, RunActionResponse
+from action_runtime.srv import RunPlan, RunPlanRequest, RunPlanResponse
 
 # pddl deps
 import pddl_parser.action as action
