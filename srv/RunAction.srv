@@ -1,0 +1,4 @@
+Action action
+---
+bool success
+string msg

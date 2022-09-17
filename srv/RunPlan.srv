@@ -1,0 +1,4 @@
+---
+bool success
+Action last_action
+Condition[] expected_state

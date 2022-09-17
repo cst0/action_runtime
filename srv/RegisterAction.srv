@@ -1,0 +1,9 @@
+Action action
+string service
+string service_type
+
+string[] action_parameters
+string[] service_parameters
+---
+bool success
+string msg

@@ -1,0 +1,7 @@
+string filepath
+
+bool domain
+bool problem
+---
+string msg
+bool success
